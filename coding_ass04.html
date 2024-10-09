@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        div{
+            width: 60px;
+            height: 60px;
+            background-color: green;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>    
+</head>
+<body>
+        <div id="balls"></div>
+
+    
+</body>
+</html>
+
+<!-- script -->
+<script>
+
+
+    // ball create function
+
+    function createBall() {
+        var ball = document.createElement("div");
+        ball.style.width = "60px";
+        ball.style.height = "60px";
+        ball.style.left = "100px";
+        ball.style.top = "100px";
+        ball.style.background = "red";
+        ball.style.borderRadius = "50%";
+        document.body.appendChild(ball);
+        return ball;
+    }
+    // stop condition
+
+    let position =0;
+    let velocity = 20;
+    function veloty(){
+        if(position<=200){
+            position += velocity;
+            balls.style.top = position + "px";
+            balls.style.left = position + "px";
+                
+        }
+
+        // return ball 
+
+        if(position>=200){
+                    velocity = -velocity;
+                    // balls.style.top = position + "px";
+                    // balls.style.left = position + "px";
+            }       
+    }setInterval(veloty,1000);
+
+</script>
